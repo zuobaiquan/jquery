@@ -57,7 +57,6 @@ body{
 .content-wrap .content-item:nth-child(4){
     background: red;
 }
-
 .tab .content-wrap .current{
 	display: block;
 }
