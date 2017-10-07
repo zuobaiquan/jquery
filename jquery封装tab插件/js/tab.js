@@ -72,7 +72,7 @@
         invokeStyle:function(currentTab){
             //获取切换效果
             var effect = this.config.effect;
-            
+
             currentTab.addClass("active").siblings().removeClass('active');
 
             //tab内容切换
@@ -105,7 +105,7 @@
     };
 
 
-    
+
     //多个调用
     Tab.init = function (tabs) {
         var that = this;

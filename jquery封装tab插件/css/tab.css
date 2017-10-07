@@ -45,7 +45,6 @@ body{
 	height: 200px;
 	display: none;
 }
-
 .content-wrap .content-item:nth-child(1){
     background: royalblue;
 }
