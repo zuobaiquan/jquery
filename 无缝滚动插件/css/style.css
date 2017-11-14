@@ -1,0 +1,5 @@
+/* CSS Document */
+*{margin:0;padding:0;font-size:14px;}
+.list_lh{ height:200px; overflow:hidden;list-style:none;}
+.list_lh li{ padding:10px;height:24px; line-height:24px;}
+.list_lh li.lieven{ background:#F0F2F3;}
