@@ -1,0 +1,207 @@
+@import "../../../../public/source/sass/normalize";
+@import 'applyreset';
+@import 'applycommon';
+.apply{
+  .form-box{
+    @include flex-box;
+    justify-content: space-between;
+    padding:0 4%;
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 1.6rem;
+    color: #282828;
+    background: #fff;
+    @include border_bottom_half;
+    &.form-noborder{
+      border-bottom: 0;
+    }
+    &.form-idcard{
+      height: auto;
+      line-height: 5rem;
+    }
+    .input-text{
+      border:0;
+      width: auto;
+      text-align: right;
+      font-size: 1.5rem;
+      &::-webkit-input-placeholder{
+          color:#ccc;
+      }
+      &:-moz-input-placeholder{
+          color:#ccc;
+      }
+    }
+    .sex{
+      .sex-icon{
+        display: inline-block;
+        height: 2.2rem;
+        width: 2.2rem;
+        background: url('../img/apply/un-selected.png') no-repeat;
+        background-size: 100%;
+        vertical-align: middle;
+        margin-right: 1rem;
+        &.sex-chosen{
+          background: url('../img/apply/selected.png') no-repeat;
+          background-size: 100%;
+        }
+      }
+      &:last-child{
+        margin-right: 4.8rem;
+      }
+    }
+    .right-text{
+      font-size: 1.4rem;
+      color: #3074C2;
+    }
+    .rightbox-text{
+      font-size: 1.5rem;
+      color: #666;
+      &.select-text{
+        height: auto;
+      }
+      .type-arrow{
+        margin-left:0.5rem;
+        display: inline-block;
+        width: 7px;
+        height: 7px;
+        border: solid #999;
+        border-width: 1px 1px 0 0;
+        -webkit-transform:rotate(45deg);
+        transform:rotate(45deg);
+      }
+      select {
+        appearance:none;
+        -moz-appearance:none;
+        -webkit-appearance:none;
+        border:none;
+        &::-ms-expand { display: none;}
+      }
+    }
+    &.avator-box{
+      height: 7rem;
+      line-height: 7rem;
+      .avator{
+        margin: 1.5rem 0;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 0.4rem;
+      }
+    }
+
+  }
+  .form-textarea{
+    padding:0 1.5rem;
+    background: #fff;
+    overflow: hidden;
+    &.last-textarea{
+      padding-bottom:1.5rem;
+    }
+    .title{
+      margin:1.6rem 0 1.5rem;
+      font-size: 1.6rem;
+      color: #282828;
+      .sub-title{
+        color: #3F3F3F;
+      }
+    }
+    .area-input{
+      padding:1rem;
+      height: 8rem;
+      width: calc(100% - 2rem);
+      background: #EEEEEE;
+      border: 1px solid #CCCCCC;
+      border-radius: 2px;
+    }
+  }
+  .idcard-container{
+    width: 100%;
+    background: #fff;
+    height: 18.4rem;
+    padding-bottom: 1.5rem;
+    .idcard-box{
+      position: relative;
+      width: 85.33%;
+      height: 18.4rem;
+      margin:0 auto;
+      background: #EEEEEE;
+      img{
+        position: absolute;
+        top:1.2rem;
+        left:0;
+        right:0;
+        margin:0 auto;
+        &.frontback-img{
+          width: 20rem;
+          height: 12rem;
+        }
+        &.idcard-img{
+          width: 12.6rem;
+          height: 12.6rem;
+        }
+      }
+      .idcard-text{
+        position: absolute;
+        bottom: 1.5rem;
+        left:0;
+        right:0;
+        font-size: 1.2rem;
+        color: #3074C2;
+        text-align: center;
+        .add-icon{
+          display: inline-block;
+          height: 1.1rem;
+          width: 1.1rem;
+          background: url(../img/apply/idcard-add.png) top center no-repeat;
+          background-size: 100%;
+          vertical-align: middle;
+          margin:{
+            top:-0.2rem;
+            right:0.5rem;
+          }
+        }
+      }
+    }
+  }
+  .apply-bottomtext{
+    position: fixed;
+    bottom:1.5rem;
+    left:0;
+    right:0;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #999999;
+    .tel{
+        color: #3074C2;
+        margin-left: 0.2rem;
+    }
+  }
+  &.verify-idcard{
+    padding-bottom: 3.4rem;
+    .form-box,.idcard-container{
+      background: transparent;
+    }
+  }
+  .idcard-example{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    width: 100%;
+    height: 23.6rem;
+    margin: 0 auto;
+    background: #F8F9F9  url(../img/apply/idcard-example.jpg) center 6.3rem no-repeat;
+    background-size:23rem 16.2rem;
+    z-index: 9;
+    display: none;
+    p{
+      margin: 1rem 2rem;
+      font-size: 1.1rem;
+      line-height: 1;
+      color: #282828;
+    }
+  }
+  .btn-step{
+      margin: 3rem auto 0;
+  }
+}

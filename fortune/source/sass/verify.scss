@@ -1,0 +1,90 @@
+@import "../../../../public/source/sass/normalize";
+@import 'applyreset';
+@import 'applycommon';
+.verify{
+  .verify-container{
+    background: #fff;
+    padding-top: 5rem;
+    .verify-box{
+      position: relative;
+      width: 7.9rem;
+      height: 7.9rem;
+      border:0.4rem solid #38A2E4;
+      border-radius: 50%;
+      margin:0 auto 2rem;
+      &.success-box{
+          border-color:transparent;
+          .success-icon{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width:7.9rem;
+            height: 7.9rem;
+            background: url(../img/apply/success-icon.png) no-repeat;
+            background-size: 100%;
+          }
+      }
+      &.fail-box{
+        border-color:#FA9D3B;
+      }
+      .line-ing1{
+        position: absolute;
+        top: 1.25rem;
+        left:50%;
+        margin-left: -0.2rem;
+        height: 3.1rem;
+        width: 0.4rem;
+        background: #38A2E4;
+        border-radius: 1rem 1rem 0 1rem;
+      }
+      .line-ing2{
+        position: absolute;
+        right:2rem;
+        top:50%;
+        margin-left: -0.2rem;
+        height: 0.4rem;
+        width: 2rem;
+        background: #38A2E4;
+        border-radius: 0 1rem 1rem 1rem;
+      }
+      .line-fail1{
+        position: absolute;
+        top:1.6rem;
+        left:50%;
+        margin-left: -0.2rem;
+        height: 3.2rem;
+        width: 0.4rem;
+        background: #FA9D3B;
+        border-radius: 1rem 1rem 0 0;
+      }
+      .line-fail2{
+        position: absolute;
+        bottom:2.5rem;
+        left:50%;
+        margin-left: -0.2rem;
+        height: 0.4rem;
+        width: 0.4rem;
+        background: #FA9D3B;
+      }
+    }
+    .verify-p{
+      line-height:1;
+      text-align: center;
+      &.verify-text{
+        font-size: 1.6rem;
+        color: #282828;
+      }
+      &.verify-time{
+        padding:3rem 0 7.7rem;
+        font-size: 1.2rem;
+        color:#666666;
+      }
+      &.verify-successtext{
+        line-height: 2.4rem;
+      }
+    }
+  }
+  .btn-step{
+    margin-top:3rem;
+  }
+}

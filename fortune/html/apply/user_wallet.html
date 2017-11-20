@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>财富号申请</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no, email=no" />
+	<link href="../{{{applyuser.css}}}" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="applybody apply">
+	<div class="form-box">
+		<span class="left">真实姓名</span>
+		<input class="input-text" type="text" placeholder="请填写您的真实姓名" value="李某某">
+	</div>
+	<div class="form-box">
+		<span class="left">身份证号</span>
+		<input class="input-text" type="text" placeholder="请填写您的身份证号" value="1***************213">
+		<!-- <span class="rightbox-text"></span> -->
+	</div>
+	<div class="form-box">
+		<span class="left">性别</span>
+		<span class="sex"><i class="sex-icon"></i>男</span>
+		<span class="sex"><i class="sex-icon sex-chosen"></i>女</span>
+	</div>
+	<div class="form-box form-idcard form-noborder">
+		<span class="left">手持身份证照片</span>
+		<span id="idcardExample" class="right-text">查看示例</span>
+	</div>
+	<div class="idcard-container">
+		<div class="idcard-box" id="uploadImg">
+			<img class="idcard-img" src="../../resource/img/apply/idcard.png" alt="">
+			<p class="idcard-text"><i class="add-icon"></i>点击添加手持身份证</p>
+		</div>
+	</div>
+	<a href="javascript:;" class="btn-step bottom-margin">下一步</a>
+	<div class="apply-bottomtext">身份证信息有误请拨打客服电话：<a href="tel:021-95357" class="tel">021-95357</a>反馈问题</div>
+	<div class="idcard-example">
+		<p>1.脸部清晰无遮挡；</p>
+		<p>2.身份证全部信息清晰无遮挡。</p>
+	</div>
+</div>
+<div class="layer"><i class="cancle-icon"></i></div>
+<combined src="fortune.lib.min.js"></combined>
+<script type="text/javascript" src="../../../../public/source/js/plugs/action-sheet2.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$(".form-box .sex").click(function(){
+			if($(this).find(".sex-icon").hasClass("sex-chosen")){
+				return ;
+			}
+			else{
+				$(this).find(".sex-icon").addClass("sex-chosen").parent(".sex").siblings().find(".sex-icon").removeClass("sex-chosen");
+			}
+		})
+		$('#idcardExample').click(function(){
+			$('.layer,.idcard-example').show();
+			$('body').css({"overflow":"hidden","position":"fixed","width": "100%"})
+		});
+		$(".cancle-icon").click(function(){
+			$('.layer,.idcard-example').hide();
+			$('body').css({"overflow":"auto","position":"static"});
+		})
+		$('#uploadImg').actionSheet2({
+				className: 'takephoto-pop',
+				data: [
+						{label: '照相', value: 1},
+						{label: '从相册中选择', value: 2}
+				],
+				onSelect: function(value){
+						console.log('sheet2:' + value);
+				},
+				onCancel: function(){
+						console.log('取消 sheet2');
+				}
+		});
+	})
+</script>
+</body>
+</html>

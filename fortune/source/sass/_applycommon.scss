@@ -1,0 +1,78 @@
+.applybody{
+  height: auto;
+  width: 100%;
+  background: #F7F8FA;
+  &.textarea-apply{
+    padding-bottom: 4rem;
+  }
+}
+.btn-step{
+  width: 91.33%;
+  margin:4rem auto 0;
+  height: 4.5rem;
+  line-height: 4.5rem;
+  background: #3382E3;
+  color:#fff;
+  display: block;
+  font-size: 1.6rem;
+  text-align: center;
+  border-radius: 0.4rem;
+  &.bottom-margin{
+    margin-bottom: 4.5rem !important;
+  }
+}
+.layer{
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0, 0, 0.6);
+  z-index: 1;
+  display: none;
+  .cancle-icon{
+    position: absolute;
+    right:2rem;
+    top:1rem;
+    display: inline-block;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: url('../img/apply/cancle.png') no-repeat;
+    background-size: 100%;
+    z-index: 9;
+  }
+}
+.pop-mask {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 99;
+    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+}
+.takephoto-pop{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+  width: 100%;
+  background: #E8EBEA;
+  li{
+    height: 5rem;
+    text-align: center;
+    border-width: 0;
+    @include border_bottom_half;
+    font-size: 1.8rem;
+    color: #000;
+    line-height: 5rem;
+    background: #fff;
+    &.cancel {
+        margin-top: 0.6rem;
+    }
+  }
+}

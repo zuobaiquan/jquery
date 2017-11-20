@@ -1,0 +1,26 @@
+﻿@import "compass/utilities/sprites";
+$icons: sprite-map("icons/*.png");
+$icons-spacing: 20px;
+$baseSize: 12px;
+$dir: 'icons';
+
+$iconsSet:
+  (icon1 1.9rem 2.1rem)
+  (icon2 2.1rem 2.1rem)
+  (icon3 2rem 2.1rem)
+  (icon5 4.5rem 4.5rem)
+  (icon6 4.5rem 4.5rem)
+  (icon7 4.5rem 4.5rem)
+  (icon9 1.9rem 1.6rem)
+  (icon10 1.8rem 1.8rem)
+  (icon11 1.9rem 1.5rem);
+@each $image in $iconsSet{
+  $name: nth($image, 1);
+  $w: nth($image, 2);
+  $h: nth($image, 3);
+  .icons-#{$name}{
+    width: $w;
+    height: $h;
+    @include spriteImage(#{$name}, $w, $h);
+  }
+}

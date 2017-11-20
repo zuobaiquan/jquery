@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>财富号详情</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no, email=no" />
+	<link href="{{{style.css}}}" rel="stylesheet" type="text/css" />
+</head>
+<body class="gray-bg black-skin">
+<div class="share detail share2">
+	<div class="common-header">
+		<div class="wrap">
+			<div class="img-wrap">
+				<img src="../resource/img/intro_img1.png" class="big" alt="" />
+				<i class="intro-icon1"></i>
+			</div>
+			<div class="title">
+				<p>申银万国期货</p>
+				<p class="sub">
+					<span>22篇文章</span>
+					<span>1222阅读</span>
+					<span>999订阅</span>
+				</p>
+			</div>
+			<a href="javascript:;">+ 订阅</a>
+		</div>
+	</div>
+	<div class="place-holder"><!--占个坑--></div>
+	<div class="scroll-wrap">
+		<div class="detail-content">
+			<p class="con">
+				申银万国期货有限公司(简称:申银万国期货)，一流综合金融服务商，在中国证监会期货公司申银万国期货有限公司(简称:申银万国期货)，一流综合金融服务商，在中国证监会期货公司申银万国期货有限公司(简称:申银万国期货)，一流综合金融服务商，在中国证监会期货公司申银万国期货有限公司(简称:申银万国期货)，一流综合金融服务商，在中国证监会期货公司申银万国期货有限公司(简称:申银万国期货)，一流综合金融服务商，在中国证监会期货公司申银万国期货有限公司(简称:申银万国期货)，一流综合金融服务商，在中国证监会期货公司申银万国期货有限公司(简称:申银万国期货)，一流综合金融服务商，在中国证监会期货公司申银万国期货有限公司(简称:申银万国期货)，一流综合金融服务商，在中国证监会期货公司
+			</p>
+			<span class="show-btn">展开</span>
+		</div>
+		<ul class="common-info-list">
+			<li>
+				<div class="img-wrap">
+					<img src="../resource/img/index_img1.png" alt="" />
+				</div>
+				<div class="info-wrap">
+					<p class="title">投资风向标：A股目前处于震荡市 潜伏“人少”的地方</p>
+					<p class="sub">
+						<span>07-15 12:12</span>
+						<span class="fr">200阅读</span>
+					</p>
+				</div>
+			</li>
+			<li>
+				<div class="img-wrap">
+					<img src="../resource/img/index_img2.png" alt="" />
+				</div>
+				<div class="info-wrap">
+					<p class="title">获得云南国际信托11.2亿贷款期限不超过3年</p>
+					<p class="sub">
+						<span>07-15 12:12</span>
+						<span class="fr">892阅读</span>
+					</p>
+				</div>
+			</li>
+			<li>
+				<div class="img-wrap">
+					<img src="../resource/img/index_img4.png" alt="" />
+				</div>
+				<div class="info-wrap">
+					<p class="title">投资风向标：A股目前处于震荡市 潜伏“人少”的地方</p>
+					<p class="sub">
+						<span>07-15 12:12</span>
+						<span class="fr">200阅读</span>
+					</p>
+				</div>
+			</li>
+			<li class="no-img">
+				<div class="info-wrap">
+					<p class="title">上市公司再融资通道生变 新规两月转债爆发超千亿</p>
+					<p class="sub">
+						<span>07-15 12:12</span>
+						<span class="fr">199阅读</span>
+					</p>
+				</div>
+			</li>
+			<li class="no-img">
+				<div class="info-wrap">
+					<p class="title">原工信部部长李毅中：四组数据证明实体经济“空心化”严重性</p>
+					<p class="sub">
+						<span>07-15 12:12</span>
+						<span class="fr">199阅读</span>
+					</p>
+				</div>
+			</li>
+		</ul>
+		<div class="my-loading">
+			<span class="loading-status loading"></span>
+			<span class="loading-text">数据载入中...</span>
+		</div>
+	</div>
+</div>
+<combined src="fortune.lib.min.js"></combined>
+<script type="text/javascript">
+	var wholeStr;
+	if($('.detail-content .con').html().length > 30){
+		wholeStr = $('.detail-content .con').html();
+		var newStr = wholeStr.substring(0,40) + '...';
+		$('.detail-content .con').html(newStr);
+	}
+	$('.show-btn').click(function(){
+		$('.detail-content .con').html(wholeStr);
+		$(this).hide();
+	});
+</script>
+</body>
+</html>
