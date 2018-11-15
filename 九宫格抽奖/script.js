@@ -1,49 +1,41 @@
+'use strict';
 $(function () {
   let $frameList = $('[data-role]');
-  let $input = $('#gift-num');
-  let k = null;
+  let Timer = null;
   let times = 0;
-  let len = null;
   let initDelayTime = 50;
   let circleCount = 0;
   let isBusy = false;
   let oldTimes = null;
-  frameList = Array.from($frameList).sort((a, b) => {
+  var frameList = Array.from($frameList).sort((a, b) => {
     return $(a).data('role') - $(b).data('role')
   });
-  len = frameList.length;
+  var len = frameList.length;
   function startGiftAm () {
-
-    k || (oldTimes = times);
+    Timer || (oldTimes = times);
     let $curItem = $(frameList[(times++) % len]);
     circleCount = parseInt((times - oldTimes) / len);
     switch (circleCount) {
-      case 0:case 1: {
+      case 0:case 1:
         break;
-      }
-      case 2:case 3: {
+      case 2:case 3:
         initDelayTime = 100;
         break;
-      }
-      default : {
-        initDelayTime = 200
-      }
+      default : initDelayTime = 200
     }
     $frameList.removeClass('active');
     $curItem.addClass('active');
-    if(circleCount === 4 && $input.val() == $curItem.data('role')) {
+    if(circleCount === 4 && $('#gift-num').val() == $curItem.data('role')) {
       circleCount = 0;
-      k = null;
+      Timer = null;
       isBusy = false;
       initDelayTime = 50;
     } else {
-      k = setTimeout(startGiftAm, initDelayTime);
+      Timer = setTimeout(startGiftAm, initDelayTime);
     }
   };
-  //
   $('.get-gift-btn').on('click', function () {
     if (!isBusy) {
-      console.log(isBusy);
       isBusy = true;
       startGiftAm();
     }
