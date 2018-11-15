@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.gift-container {
+    position: relative;
+}
+.gift-container>ul {
+    font-size: 0;
+}
+.gift-container>ul>li {
+    margin-bottom: 20px;
+}
+.gift-container>ul>li> .gift-box:nth-of-type(2) {
+    margin: 0 20px;
+}
+.gift-container .gift-box {
+    display: inline-block;
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
+    background: black;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 5px;
+}
+.gift-container .gift-box.active {
+    background: red;
+}
+.get-gift-btn {
+    cursor: pointer;
+}
